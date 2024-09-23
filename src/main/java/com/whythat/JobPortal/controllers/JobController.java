@@ -12,10 +12,10 @@ import java.util.List;
 @RestController
 @CrossOrigin
 public class JobController {
-    private JobService jobService;
+    private final JobService jobService;
 
     @Autowired
-    public void setJobService(JobService jobService) {
+    public JobController(JobService jobService) {
         this.jobService = jobService;
     }
 

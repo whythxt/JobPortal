@@ -8,11 +8,11 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class UserService {
-    private UserRepo userRepo;
+    private final UserRepo userRepo;
     private final BCryptPasswordEncoder encoder = new BCryptPasswordEncoder(12);
 
     @Autowired
-    public void setUserRepo(UserRepo userRepo) {
+    public UserService(UserRepo userRepo) {
         this.userRepo = userRepo;
     }
 

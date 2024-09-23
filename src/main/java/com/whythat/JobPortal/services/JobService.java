@@ -10,10 +10,10 @@ import java.util.List;
 
 @Service
 public class JobService {
-    public JobRepo repo;
+    private final JobRepo repo;
 
     @Autowired
-    public void setRepo(JobRepo repo) {
+    public JobService(JobRepo repo) {
         this.repo = repo;
     }
 
